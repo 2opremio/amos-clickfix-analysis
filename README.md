@@ -136,7 +136,8 @@ binary.
 decompiled/stage1.sh              stage 1 one-liner, decoded
 decompiled/stage2.zsh             loader, decrypted
 decompiled/stage3.zsh             dropper, decrypted
-decompiled/stage5.applescript     final payload, decompiled from run-only
+decompiled/stage5.applescript              final payload, decompiled from run-only
+decompiled/stage5_deobfuscated.applescript same script, identifiers renamed for readability
 iocs/network.txt                  domains, IPs, URLs
 iocs/host.txt                     paths, LaunchDaemons, keychain
 iocs/samples.txt                  hashes and code signing
