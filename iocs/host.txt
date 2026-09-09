@@ -1,0 +1,27 @@
+# AMOS ClickFix campaign
+# Host indicators.
+
+## Dropped binary
+/tmp/.algjq
+
+## Staging directories, impersonating Apple system paths
+/Library/Application Support/.com.apple.metadata.mds
+/Library/Application Support/.com.apple.accountsd
+
+## Persistence, LaunchDaemons impersonating Apple services
+com.apple.metadata.mds.worker         impersonates Spotlight
+com.apple.accountsd.helper            impersonates Accounts
+
+## Files written
+~/Library/Application Support/.com.apple.accountsd/.auth   phished password, cleartext
+~/.logged                                                  marker containing "user100"
+<staging>/pwd                                              phished password
+<staging>/masterpass-chrome                                Chrome Safe Storage key
+
+## Keychain
+"Chrome Safe Storage" ACL partition list rewritten to include teamid:EQHXZ8M8AV
+
+## Archive names
+/tmp/.<prefix>o_<uuid>.zip     collected data
+/tmp/.<prefix>a_<uuid>.zip     Ledger replacement
+/tmp/.<prefix>c_<uuid>.zip     Exodus replacement

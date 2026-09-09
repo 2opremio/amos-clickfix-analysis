@@ -1,0 +1,16 @@
+# AMOS ClickFix campaign
+# SHA-256. Stage 4 build hashes rotate roughly hourly; treat them as perishable.
+
+4903c40fbdb96cf39f35ed592a886a39d230564b26dd80aef3fa6c58bc501551  stage 4, packed Mach-O, build A (330592 b)
+b95ea805469383b5a419c5043de45bb2b13f36b3a513f98bd608b3f7294f064f  stage 4, packed Mach-O, build B (330704 b)
+970d309161a68d460b7183f2912b459fd1206229794b28d818e0b82f4fd22f3d  stage 2, zsh loader
+8f12396cfb1ac4d52b3c0fad997b2cf83839bc464cfa43e43959239a3016d287  stage 5, run-only AppleScript
+
+# Code signing, both builds ad-hoc, no Team ID
+setup-ccc431a174b8cc933fa2eb49ee3c49293864cc06   build A signing identifier
+setup-82a8d5df0f36c6ea0fefd4c816ec8a8d55563b5f   build B signing identifier
+3d87d76b202d44445220918a747ccfa9fc3c7ba3         build A CDHash
+d50bc1d32e13e4c4eeb162398e490b1e20f055ed         build B CDHash
+
+# Campaign identifier in the stage 4 header
+BuildID: AgJK0z9AClpg1dEUQSbb5DcvhbPxPAmi_EEzAgzqLqJubNQ

@@ -1,0 +1,28 @@
+# AMOS ClickFix campaign
+# Network indicators. Defanged.
+
+## Delivery
+fingerprint-verification[.]info    stage 1 gate, fake Cloudflare verification page
+shelternode18[.]com                stage 2 zsh loader and stage 4 Mach-O
+
+## Telemetry and C2
+flint-32[.]com                     stage 2 host beacon
+188.166.83[.]118                   stage 5 telemetry, path /api/metrics/run, contacted by raw IP (no DNS)
+
+## Exfiltration
+jadeleap15[.]com
+loop-lumen[.]com
+
+## Trojanised wallet replacements, served from loop-lumen[.]com
+https://loop-lumen[.]com/zxc/app.zip        replaces /Applications/Ledger Wallet.app
+https://loop-lumen[.]com/zxc/apptwo.zip     replaces /Applications/Trezor Suite.app
+https://loop-lumen[.]com/zxc/appex.zip      replaces /Applications/Exodus.app
+
+## Full URLs observed
+http://fingerprint-verification[.]info/p/<TOKEN>
+https://shelternode18[.]com/curl/quttremj8sr8/kpsvfoti7e6sma2ys3l.dat
+https://shelternode18[.]com/2kqYRM0DCrnyJgoS4gVLl_FHJRRdTUhGCbjyuYwpZ6c/DANTE/update
+https://flint-32[.]com/api/metrics/run?event=pasted
+
+# Not listed as indicators: the IPv4 addresses behind shelternode18[.]com and
+# flint-32[.]com resolve to Cloudflare and would produce false positives.
